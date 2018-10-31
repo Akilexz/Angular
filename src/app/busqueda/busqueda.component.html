@@ -1,0 +1,104 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row" *ngIf="datos">
+            <div class="col-md-12" *ngFor="let inscripcion of inscriptionData">
+                <div class="card">
+                    <div class="card-header card-header-success">
+                        <h4 class="card-title">Resultado de la Búsqueda</h4>
+                        <p class="card-category">Publicaciones</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="font-weight-bold">Tipo:</label>
+                                <p class="card-category">{{inscripcion.periodo}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="font-weight-bold">Carrera:</label>
+                                <p class="card-category">{{inscripcion.carrera}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="font-weight-bold">Nombres:</label>
+                                <p class="card-category">{{inscripcion.nombres}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="font-weight-bold">Apellidos:</label>
+                                <p class="card-category">{{inscripcion.apellidos}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="font-weight-bold">Cédula:</label>
+                                <p class="card-category">{{inscripcion.cedula}}</p>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="font-weight-bold">Teléfono:</label>
+                                <p class="card-category">{{inscripcion.telefono}}</p>
+                            </div>
+                            <div class="col-md-5">
+                                <label class="font-weight-bold">Correo:</label>
+                                <p class="card-category">{{inscripcion.email}}</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-end">
+                            <div class="col-lg-5 col-md-6 col-sm-6 pull-right">
+                                <div class="card card-stats">
+                                    <div class="card-header card-header-success card-header-icon">
+                                        <div class="card-icon">
+                                            <i class="material-icons">attach_money</i>
+                                        </div>
+                                        <p class="card-category">Total</p>
+                                        <h3 class="card-title">{{inscripcion.valorPagar}}</h3>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="stats">
+                                            <i class="material-icons">date_range</i> Recuede cancelar el valor para
+                                            continuar con su matricula
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button mat-raised-button type="submit" class="btn btn-success btn-round pull-right" (click)="enviar(inscripcion.cedula)"><i class="material-icons">payment</i>
+                            Continuar</button>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="!datos">
+            <div class="card">
+                <div class="card-header card-header-danger">
+                    <h3 class="card-title">Publicaciones</h3>
+                    <p class="card-category">No se ha encontrado registro de publicaciones.
+                    </p>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4 class="card-title">Revise los posibles problemas del porque no se encuentra su inscripción: </h4>
+                           
+                            <div class="alert alert-info alert-with-icon" data-notify="container">
+                                <i class="material-icons" data-notify="icon">add_alert</i>
+                                <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <i class="material-icons">close</i>
+                                </button>
+                                <span data-notify="message">No completó el formulario de inscripción en Autoservicios.</span>
+                            </div>
+                            <div class="alert alert-info alert-with-icon" data-notify="container">
+                                <i class="material-icons" data-notify="icon">add_alert</i>
+                                <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <i class="material-icons">close</i>
+                                </button>
+                                <span data-notify="message">Su inscripcíon no ha sido aprovada.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

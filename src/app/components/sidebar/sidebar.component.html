@@ -1,0 +1,26 @@
+<div class="logo">
+    <img class="mx-auto d-block" src="/assets/img/Espe-Angular-Logo.png" />
+</div>
+<div class="sidebar-wrapper">
+    <p-fieldset legend="Busqueda" [toggleable]="true">
+        <ul class="nav">
+            <li>
+                <span class="bmd-form-group">
+                    <label for="cedula" class="font-weight-bold">Nombre:
+                    </label>
+                    <div class="input-group no-border">
+                        <input type="text" #cedula class="form-control" placeholder="Ingrese su nombre..." >
+                    </div>
+                </span>
+            </li>
+             <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item ">
+                    <a class="nav-link" [routerLink]="[menuItem.path]">
+                        <i class="material-icons">{{menuItem.icon}}</i>
+                        <p>{{menuItem.title}}</p>
+                    </a>
+                </li> 
+        </ul>
+
+    </p-fieldset>
+    <p-toast [style]="{'marginTop': '80px'}" [style.z-index]="9999"></p-toast>
+</div>

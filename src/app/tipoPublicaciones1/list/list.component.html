@@ -1,0 +1,133 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Publicaciones</h4>
+                <p class="card-category">Sistema para realizar publicaciones</p>
+                <div class="row">
+                    <div class="col-12">
+                        <button mat-raised-button class="btn btn-round btn-sm pull-right">
+                                <i class="material-icons">add</i>
+                            <a href="/publicaciones/edit" title="crear">crear</a>
+                        </button>
+                        </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="typography">
+                    <div class="card-title">
+                        <h2> Publicaciones</h2>
+                    </div>
+                    
+                    <div style="text-align: right">
+                        <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+                        <input type="text" pInputText class="form-control" size="25" placeholder="Búsqueda">
+                    </div>
+                    <table class="table">
+
+                        <tr class="filters">
+                            <th>
+                                Id
+                                <input type="text" pInputText class="form-control" size="5" placeholder="cedula">
+                            </th>
+                            <th>
+                                Tipo
+                                <div>
+                                <select id="lista " name="lista" class="form-control">
+                                    <option value="normal">normal</option>
+                                    <option value="urgente">urgente</option>
+                                    <option value="atrasado">atrasado</option>
+                                    <option value="importante">importante</option>
+                                </select>
+                            </div>
+                            </th>
+                            <th>
+                                Fecha
+                                <div>
+                                   <p-calendar [(ngModel)]="date" [inline]="false"></p-calendar>
+                                </div>
+                                </th>
+                            <th>
+                                Prioridad
+                                <div>
+                                <select id="lista " name="lista" class="form-control">
+                                        <option value="Alta" >Alta</option>
+                                        <option value="Media" >Media</option>
+                                        <option value="Baja" >Baja</option>
+                                    </select>
+                                </div>
+                                </th>
+                                
+                            <th>
+                                estado
+                                <div class="progress">
+                                        <select id="lista " name="lista" class="form-control" >
+                                                <option value="normal" >Abierto</option>
+                                                <option value="urgente">Cerrado</option>
+                                                <option value="urgente"></option>
+                                            </select>
+                                        
+                                        </div>
+                            </th>
+                            <th>
+                                Opción
+                                <div>  <i class="material-icons">
+                                                                 
+                                        <select name="lista" id="lista" class="form-control">
+                                            <option value="photo ">photo</option>
+                                            <option value="attach_file">attach_file</option>
+                                            <option value="videocam"> videocam</option>
+                                        </select>                                    
+                                    </i>
+                                </div>                               
+                            </th>
+                            
+                            <div class="col-12"></div>
+  
+                        <tr *ngFor="let publicacion of  publicaciones">
+                            <td>{{publicacion.desId}}
+                            </td>
+
+                            <td>{{ publicacion.nombre}}
+                            </td>
+                            <td>{{publicacion.pubFecha}}
+                            </td>
+                            <td>{{publicacion.pubPrioridad}}
+                            </td>
+
+                            <td>{{publicaciones.pubEstado}}
+                                })
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                        <span class="sr-only">20% completado </span>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>
+                                <button mat-raised-button class="btn btn-success btn-round btn-sm pull-left">
+                                    <i class="material-icons">videocam</i>Video</button>
+                            </td>
+                        </tr>
+                    
+                    </table>
+
+                    <table class="table">
+
+                        <tr class="filters">
+                                <th>
+                                        Area
+                                        <input type="text" pInputText class="form-control" size="5" placeholder="Area">
+                                </th>
+                            <th>
+                                    Seleccione Destino      
+                                    <div>                             
+                                       <select id="lista " name="lista" class="form-control">                                  
+                                        <option value="urgente">YouTubes</option>
+                                        <option value="atrasado">Mi Espe</option>
+                                        <option value="atrasado">Facebook</option>
+                                        <option value="atrasado">Email</option>
+                                    </select>
+                                </div>
+                                </th>   

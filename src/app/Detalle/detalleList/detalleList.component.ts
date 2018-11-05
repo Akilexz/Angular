@@ -6,10 +6,10 @@ import { PublicacionService } from '../../services/publicacion.service';
 
 @Component({
     selector: 'app-list',
-    templateUrl: './list.component.html',
-    styleUrls: ['./list.component.css']
+    templateUrl: './detalleList.component.html',
+    styleUrls: ['./detalleList.component.css']
 })
-export class ListComponent implements OnInit {
+export class DetalleListComponent implements OnInit {
 
     publicaciones: any;
     date: Date;

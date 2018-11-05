@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-delete',
-  templateUrl: './delete.component.html',
-  styleUrls: ['./delete.component.css']
+  templateUrl: './detalleDelete.component.html',
+  styleUrls: ['./detalleDelete.component.css']
 })
-export class DeleteComponent implements OnInit {
+export class DetalleDeleteComponent implements OnInit {
 
   date: Date;
   constructor() { }

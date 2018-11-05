@@ -1,13 +1,16 @@
+import { DetalleCreateComponent } from './detalleCreate/detalleCreate.component';
+import { DetalleDeleteComponent } from './detalleDelete/detalleDelete.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { CreateComponent } from './create/create.component';
-import { DeleteComponent } from './delete/delete.component';
+import { DetalleEditComponent } from './detalleEdit/detalleEdit.component';
+import { DetalleListComponent } from './detalleList/detalleList.component';
 import { FieldsetModule } from 'primeng/fieldset';
 import { ToastModule } from 'primeng/toast';
 import { InputMaskModule } from 'primeng/inputmask';
 import { CalendarModule } from 'primeng/calendar';
 import { PaginatorModule } from 'primeng/paginator';
+
 
 
 @NgModule({
@@ -21,12 +24,16 @@ import { PaginatorModule } from 'primeng/paginator';
         FieldsetModule
     ],
     declarations: [
-        CreateComponent,
-        DeleteComponent
+        DetalleEditComponent,
+        DetalleListComponent,
+        DetalleDeleteComponent,
+        DetalleCreateComponent
     ],
     exports: [
-        CreateComponent,
-        DeleteComponent
+        DetalleEditComponent,
+        DetalleListComponent,
+        DetalleDeleteComponent,
+        DetalleCreateComponent
     ]
 })
-export class PublicacionesModule { }
+export class DestinoModule { }

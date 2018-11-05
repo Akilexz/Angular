@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-create',
-  templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css']
+  templateUrl: './detalleCreate.component.html',
+  styleUrls: ['./detalleCreate.component.css']
 })
-export class CreateComponent implements OnInit {
+export class DetalleCreateComponent implements OnInit {
 
   date: Date;
   constructor() { }

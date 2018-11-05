@@ -1,8 +1,10 @@
-import { NgModule } from '@angular/core';
+import { TipoPubListComponent } from './tipoPubList/tipoPubList.component';
+import { TipoPubDeleteComponent } from './tipPubDelete/tipPubDelete.component';
+import { TipoPubEditComponent } from './tipoPuEdit/tipoPuEdit.component';
+import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { CreateComponent } from './create/create.component';
-import { DeleteComponent } from './delete/delete.component';
+import { TipoPubCreateComponent } from './tipoPubCreate/TipoPubCreate.component';
 import { FieldsetModule } from 'primeng/fieldset';
 import { ToastModule } from 'primeng/toast';
 import { InputMaskModule } from 'primeng/inputmask';
@@ -21,12 +23,16 @@ import { PaginatorModule } from 'primeng/paginator';
         FieldsetModule
     ],
     declarations: [
-        CreateComponent,
-        DeleteComponent
+        TipoPubCreateComponent,
+        TipoPubDeleteComponent,
+        TipoPubEditComponent,
+        TipoPubListComponent
     ],
     exports: [
-        CreateComponent,
-        DeleteComponent
+        TipoPubCreateComponent,
+        TipoPubDeleteComponent,
+        TipoPubEditComponent,
+        TipoPubListComponent
     ]
 })
 

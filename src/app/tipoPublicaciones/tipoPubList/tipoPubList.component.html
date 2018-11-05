@@ -61,15 +61,17 @@
                             <th>
                                 estado
                                 <div class="progress">
-                                        <select id="lista" name="lista" class="form-control" >
+                                        <select id="lista " name="lista" class="form-control" >
                                                 <option value="normal" >Abierto</option>
-                                                <option value="urgente">Cerrado</option>         
-                                      </select>       
-                                 </div>
+                                                <option value="urgente">Cerrado</option>
+                                                <option value="urgente"></option>
+                                            </select>
+                                        
+                                        </div>
                             </th>
                             <th>
                                 Opción
-                                <div>  <i class="material-icons" >
+                                <div>  <i class="material-icons">
                                                                  
                                         <select name="lista" id="lista" class="form-control">
                                             <option value="photo ">photo</option>
@@ -120,12 +122,12 @@
                                 </th>
                             <th>
                                     Seleccione Destino      
-                                    <tr *ngFor="let publicacion of  publicaciones">
-                                        <td>{{ publicacion.nombre}}
-                                        </td>            
-                                        <td>
-                                            <button mat-raised-button class="btn btn-success btn-round btn-sm pull-left">
-                                                <i class="material-icons">videocam</i>Video</button>
-                                        </td>
-                                    </tr>   
+                                    <div>                             
+                                       <select id="lista " name="lista" class="form-control">                                  
+                                        <option value="urgente">YouTubes</option>
+                                        <option value="atrasado">Mi Espe</option>
+                                        <option value="atrasado">Facebook</option>
+                                        <option value="atrasado">Email</option>
+                                    </select>
+                                </div>
                                 </th>   

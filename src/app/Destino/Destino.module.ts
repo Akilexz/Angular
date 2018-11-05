@@ -1,9 +1,10 @@
-import { DeleteComponent } from '../publicaciones/delete/delete.component';
+import { DestinoCreateComponent } from './destinoCreate/destinoCreate.component';
+import { DestinoDeleteComponent } from './destinoDelete/destinoDelete.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { EditComponent } from './edit/edit.component';
-import { ListComponent } from './list/list.component';
+import { DestinoEditComponent } from './destinoEdit/destinoEdit.component';
+import { DestinoListComponent } from './destinoList/destinoList.component';
 import { FieldsetModule } from 'primeng/fieldset';
 import { ToastModule } from 'primeng/toast';
 import { InputMaskModule } from 'primeng/inputmask';
@@ -23,14 +24,16 @@ import { PaginatorModule } from 'primeng/paginator';
         FieldsetModule
     ],
     declarations: [
-        EditComponent,
-        ListComponent,
-        DeleteComponent
+        DestinoEditComponent,
+        DestinoListComponent,
+        DestinoDeleteComponent,
+        DestinoCreateComponent
     ],
     exports: [
-        EditComponent,
-        ListComponent,
-        DeleteComponent
+        DestinoEditComponent,
+        DestinoListComponent,
+        DestinoDeleteComponent,
+        DestinoCreateComponent
     ]
 })
-export class PublicacionesModule { }
+export class DestinoModule { }
